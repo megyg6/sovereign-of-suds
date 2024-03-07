@@ -11,6 +11,7 @@ This project was motivated to build an activity that advanced web scraping, data
 - Data Cleaning
 - EDA
 - Challenges
+- Notebooks info
 
 #### Data Question:
  Does alcohol by volume (ABV) play a role in how well a beer is scored? 
@@ -36,7 +37,9 @@ The majority of the EDA consisted of grouping, counting, looking for midpoints, 
 The final visualizations were later done using Tableau.
 
 #### Challenges: 
-1) There were moments when the site (and this could have also been in conjunction with internet instability) placed a time-out on the web scraping process. The original intention had been to scrape every beer element from the website. These timeouts were random and lasted for different intervals. However, it was found that by starting a new notebook and restarting the process, the scraper could function again (not always, but more often than not). To also combat this, if the scraper was being blocked, the header portion was alternated and there were a few 'time delays' placed during the process. (A proxy was not used during this project, but would have bee the best option to deal with this issue.)
+1) There were moments when the site (and this could have also been in conjunction with internet instability) placed a time-out on the web scraping process. The original intention had been to scrape every beer element from the website. These timeouts were random and lasted for different intervals. However, it was found that by starting a new notebook and restarting the process, the scraper could function again (not always, but more often than not). To also combat this, if the scraper was being blocked, the header portion was alternated and there were a few 'time delays' placed during the process. (A proxy was not used during this project, but would have been the best option to deal with this issue.)
 
-  # Read me in progress
+2) Initially, Cloudscraper was only called once at the beginning of a notebook, but eventually it was noticed that 403 would pop up later on as a status when double-checking if the scraper was receiving a response. (Perhaps due to a personal limitation, when reading through the documentation, this might have been the case, but a strategy was implemented to overcome this.) This led to the creation of 'cook_soup' as a defined function, to go through the process of calling Cloudscraper and 'making soup' with the BeautifulSoup library.
+
+3) During the web scraping process, the type of beer was not collected, only the subtype was named. This prompted the creation of an extensive if / else statement.
   
